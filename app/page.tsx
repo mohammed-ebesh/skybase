@@ -31,7 +31,7 @@ function Units() {
 
   // Store `globalPermissionIds` securely in localStorage with hashing
   useEffect(() => {
-    if (globalPermissionIds.length > 0) {
+    if (globalPermissionIds?.length > 0) {
       const dataToStore = JSON.stringify(globalPermissionIds);
       hashData(dataToStore).then((hashedValue) => {
         localStorage.setItem("globalPermissionIdsHash", hashedValue);
